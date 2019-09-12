@@ -1,31 +1,56 @@
 // Navigation Styles here
 header {
-  width: 100%;
+  max-width: 100%;
   height: 30%;
   .nav {
+    margin: 0 auto;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 12vh;
     border-bottom: 2px dashed black;
+    @media @mobile {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
     .nav-logo {
       width: 33%;
       display: flex;
       justify-content: center;
-      padding: 2%;
+      margin: 2%;
+      @media @mobile {
+        width: 100%;
+        margin-top: 4%;
+      }
     }
     .nav-links-container {
-      width: 57%;
+      width: 46%;
+      @media @mobile {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5%;
+      }
       .nav-links {
         display: flex;
-        justify-content: center;
-        padding-bottom: 4%;
+        justify-content: space-around;
+        margin-right: 24%;
+        @media @mobile {
+          margin: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+        }
         a {
           text-decoration: none;
           color: black;
           font-size: 1.4rem;
-          padding: 2% 2% 0 2%;
-          margin: 2% 2% 0 2%;
+          @media @mobile {
+            display: flex;
+            justify-content: space-around;
+          }
         }
       }
     }
